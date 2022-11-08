@@ -8,6 +8,8 @@ function BucketList() {
   // Function to add a bucket list item
   const addBucketItem = (item) => {
     // TODO: Write logic to add the new bucket item to the bucket state variable
+    console.log(item);
+    setBucket([...bucket, item]);
   };
 
   // Function to mark bucket list item as complete
@@ -24,6 +26,9 @@ function BucketList() {
   const removeBucketItem = (id) => {
     // TODO: Write logic that will return an array of items that don't contain the ID passed to this function
     // TODO: Update the bucket state variable
+    console.log("hello hello");
+    const updatedBucket = bucket.filter((item) => id !== item.id);
+    setBucket(updatedBucket);
   };
 
   // Function to edit the bucket list item
